@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portal for an Ecological Volunteer Movement: clean-up days, waste collection points, eco-tips and volunteer registration.">
+  <title>Portal for an Ecological Volunteer Movement</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme switch state (pure CSS): checked = dark theme -->
+  <input type="checkbox" id="theme-toggle" class="visually-hidden" aria-label="Dark mode">
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Eco Volunteers, home">
+      <!-- International recycling symbol (three chasing arrows) -->
+      <svg class="brand-icon" viewBox="0 0 64 64" role="img" aria-label="Recycling symbol">
+        <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 20 L32 6 L42 20"/>
+          <path d="M32 6 L18 30"/>
+          <path d="M52 34 L48 50 L32 50"/>
+          <path d="M48 50 L56 36"/>
+          <path d="M14 36 L10 52 L26 54"/>
+          <path d="M10 52 L22 40"/>
+        </g>
+      </svg>
+      <span class="brand-name">EcoVolunteers</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="visually-hidden" aria-label="Open menu">
+    <label for="nav-toggle" class="burger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#actions">Eco-Actions</a></li>
+        <li><a href="#points">Collection Points</a></li>
+        <li><a href="#tips">Eco-Tips</a></li>
+        <li><a href="#volunteer" class="nav-cta">Become a Volunteer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Media background: vector scene (replace with a photo if needed) -->
+      <svg class="hero-media" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0f3b32"/>
+            <stop offset="1" stop-color="#2f7d5b"/>
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="600" fill="url(#sky)"/>
+        <circle cx="960" cy="150" r="70" fill="#f2c14e" opacity="0.9"/>
+        <g fill="#0b2a24" opacity="0.85">
+          <rect x="60" y="360" width="90" height="240"/>
+          <rect x="170" y="300" width="70" height="300"/>
+          <rect x="260" y="390" width="110" height="210"/>
+          <rect x="400" y="330" width="80" height="270"/>
+          <rect x="800" y="380" width="100" height="220"/>
+          <rect x="920" y="320" width="80" height="280"/>
+          <rect x="1020" y="400" width="120" height="200"/>
+        </g>
+        <g fill="#5fb878">
+          <ellipse cx="560" cy="470" rx="70" ry="110"/>
+          <ellipse cx="660" cy="450" rx="80" ry="130"/>
+          <ellipse cx="740" cy="490" rx="60" ry="100"/>
+        </g>
+        <rect x="0" y="540" width="1200" height="60" fill="#0a2520"/>
+      </svg>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1 id="hero-title">Let's Make Our City Cleaner Together</h1>
+        <p class="hero-lead">Join neighbours who sort, collect and clean every weekend. Next Clean-up Day: Saturday, 9:00.</p>
+        <a class="btn btn-cta" href="#volunteer">I Want to Join the Clean-up Day</a>
+      </div>
+    </section>
+
+    <section id="actions" class="section" aria-labelledby="actions-title">
+      <h2 id="actions-title">Eco-Actions</h2>
+      <ul class="actions-list">
+        <li>
+          <time datetime="2026-11-07">7 Nov</time>
+          <p><strong>River bank clean-up.</strong> Gloves and bags are provided.</p>
+        </li>
+        <li>
+          <time datetime="2026-11-14">14 Nov</time>
+          <p><strong>Glass &amp; paper drive.</strong> Bring sorted waste to your district point.</p>
+        </li>
+        <li>
+          <time datetime="2026-11-21">21 Nov</time>
+          <p><strong>Courtyard planting.</strong> Help us plant trees with residents.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="points" class="section section-alt" aria-labelledby="points-title">
+      <h2 id="points-title">Collection Points</h2>
+      <p class="section-lead">Find the nearest point, check its schedule and see which fractions it accepts.</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Central Point</h3>
+          <p class="card-address">12 Abay Ave.</p>
+          <p class="card-schedule">Mon–Sat, 9:00–19:00</p>
+          <ul class="fractions" aria-label="Accepted fractions">
+            <li class="tag tag-polymers">Polymers</li>
+            <li class="tag tag-glass">Glass</li>
+            <li class="tag tag-paper">Paper</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Riverside Point</h3>
+          <p class="card-address">45 Dostyk St.</p>
+          <p class="card-schedule">Tue, Thu, Sat, 10:00–17:00</p>
+          <ul class="fractions" aria-label="Accepted fractions">
+            <li class="tag tag-glass">Glass</li>
+            <li class="tag tag-paper">Paper</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>North District Point</h3>
+          <p class="card-address">7 Raimbek Ave.</p>
+          <p class="card-schedule">Daily, 8:00–20:00</p>
+          <ul class="fractions" aria-label="Accepted fractions">
+            <li class="tag tag-polymers">Polymers</li>
+            <li class="tag tag-paper">Paper</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>University Point</h3>
+          <p class="card-address">18 Rozybakiev St.</p>
+          <p class="card-schedule">Mon–Fri, 8:00–18:00</p>
+          <ul class="fractions" aria-label="Accepted fractions">
+            <li class="tag tag-polymers">Polymers</li>
+            <li class="tag tag-glass">Glass</li>
+            <li class="tag tag-paper">Paper</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Market Point</h3>
+          <p class="card-address">3 Zhibek Zholy St.</p>
+          <p class="card-schedule">Wed–Sun, 9:00–16:00</p>
+          <ul class="fractions" aria-label="Accepted fractions">
+            <li class="tag tag-glass">Glass</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Park Point</h3>
+          <p class="card-address">1 Gorky Park Entrance</p>
+          <p class="card-schedule">Sat–Sun, 10:00–18:00</p>
+          <ul class="fractions" aria-label="Accepted fractions">
+            <li class="tag tag-polymers">Polymers</li>
+            <li class="tag tag-paper">Paper</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="tips" class="section" aria-labelledby="tips-title">
+      <h2 id="tips-title">Eco-Tips</h2>
+      <div class="cards cards-tips">
+        <article class="tip">
+          <h3>Rinse before you sort</h3>
+          <p>A quick rinse keeps jars and bottles recyclable and the rest of the bin clean.</p>
+        </article>
+        <article class="tip">
+          <h3>Flatten and stack</h3>
+          <p>Flat cardboard and crushed bottles take far less room in the container.</p>
+        </article>
+        <article class="tip">
+          <h3>Check the number</h3>
+          <p>The number inside the recycling triangle tells you which plastic it is.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="volunteer" class="section section-alt" aria-labelledby="volunteer-title">
+      <h2 id="volunteer-title">Become a Volunteer</h2>
+      <p class="section-lead">Fill in the form and a coordinator will contact you within two days.</p>
+
+      <form class="form" action="#" method="post">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" minlength="2" required autocomplete="name">
+          <span class="hint">At least 2 characters.</span>
+        </div>
+
+        <div class="field">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" placeholder="18" min="16" max="99" required>
+          <span class="hint">From 16 to 99.</span>
+        </div>
+
+        <div class="field">
+          <label for="district">District</label>
+          <input type="text" id="district" name="district" placeholder="e.g. Medeu" required>
+          <span class="hint">Where you live or study.</span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required autocomplete="email">
+          <span class="hint">Use a valid email address.</span>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 700 000 00 00" pattern="[+]?[0-9 ()\-]{10,18}" required autocomplete="tel">
+          <span class="hint">10–18 digits, spaces and + allowed.</span>
+        </div>
+
+        <div class="field">
+          <label for="skill">Competency</label>
+          <select id="skill" name="skill" required>
+            <option value="" selected disabled>Choose how you can help</option>
+            <option value="transport">Transport</option>
+            <option value="resources">Resources</option>
+            <option value="manual">Manual labor</option>
+          </select>
+          <span class="hint">Pick one option.</span>
+        </div>
+
+        <div class="field field-wide">
+          <label for="message">Anything we should know?</label>
+          <textarea id="message" name="message" rows="3" maxlength="300" placeholder="Optional"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-cta field-wide">Send application</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="footer-stats" aria-label="Recycling statistics">
+      <dl>
+        <div><dt>Tonnes of waste sorted</dt><dd>128</dd></div>
+        <div><dt>Active volunteers</dt><dd>2,450</dd></div>
+        <div><dt>Collection points</dt><dd>36</dd></div>
+        <div><dt>Clean-up days held</dt><dd>74</dd></div>
+      </dl>
+    </section>
+
+    <div class="footer-columns">
+      <nav aria-label="Footer navigation">
+        <h2 class="footer-title">Navigate</h2>
+        <ul>
+          <li><a href="#actions">Eco-Actions</a></li>
+          <li><a href="#points">Collection Points</a></li>
+          <li><a href="#tips">Eco-Tips</a></li>
+          <li><a href="#volunteer">Become a Volunteer</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Environmental funds">
+        <h2 class="footer-title">Environmental funds</h2>
+        <ul>
+          <li><a href="https://www.wwf.org" target="_blank" rel="noopener">WWF</a></li>
+          <li><a href="https://www.greenpeace.org" target="_blank" rel="noopener">Greenpeace</a></li>
+          <li><a href="https://www.unep.org" target="_blank" rel="noopener">UN Environment Programme</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-block">
+        <h2 class="footer-title">Appearance</h2>
+        <label class="theme-switch" for="theme-toggle">
+          <span class="theme-track"><span class="theme-thumb"></span></span>
+          <span class="theme-label">Light / Dark mode</span>
+        </label>
+      </div>
+    </div>
+
+    <p class="legal">
+      &copy; 2026 Ecological Volunteer Movement. Non-profit community project.
+      Data on this page is for demonstration purposes. <a href="#top">Privacy policy</a> · <a href="#top">Terms of use</a>
+    </p>
+  </footer>
+</body>
+</html>
